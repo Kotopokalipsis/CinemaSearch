@@ -16,13 +16,8 @@
 
     static mapResponseToFilmObject(response) {
         let filmArray = [];
-        // eslint-disable-next-line no-console
-        // console.log(response);
         
         response.data.forEach(function (currentValue) {
-            // let currentValue = JSON.parse(currentValueJSON);
-            // eslint-disable-next-line no-console
-            // console.log(currentValue);
             let film = new filmObject(
                 currentValue.title,
                 currentValue.description,
@@ -33,8 +28,7 @@
 
             filmArray.push(film);
         })
-        // // eslint-disable-next-line no-console
-        // console.log(filmArray);
+
         return filmArray;
     }
 }

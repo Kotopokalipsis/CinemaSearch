@@ -20,8 +20,6 @@ export default {
         axios
             .get("http://localhost:50598/api/search/all")
             .then(response => {
-                // eslint-disable-next-line no-console
-                console.log(response);
                 this.films = filmObject.mapResponseToFilmObject(response);
             })
             .catch(err => {
